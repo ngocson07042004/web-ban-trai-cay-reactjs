@@ -1,0 +1,96 @@
+.shuffle{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.shuffle::-webkit-scrollbar{
+    width: 5px;
+}
+
+.shuffle .shuffle-title{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+    background: red;
+}
+
+.shuffle-title h4{
+    color: white;
+}
+
+.shuffle-product{
+    width: 100%;
+    height: 95%;
+    padding: 10px;
+}
+
+.shuffle-product h4.total-cart{
+    text-align: right;
+}
+
+.shuffle-product h4.total-cart>span{
+    font-weight: normal;
+}
+
+.shuffle ul.shuffles-list{
+    width: 100%;
+    height: 100%;
+}
+
+.shuffle ul.shuffles-list li{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.shuffle ul.shuffles-list li img{
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+}
+
+ul.shuffles-list li .btn-group{
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul.shuffles-list li .btn-group button{
+    width: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+ul.shuffles-list li .btn-group span.quantity{
+    width: calc(100% - 20px);
+    background: rgb(243, 230, 230);
+    border: 1px solid rgb(51, 50, 50);
+    text-align: center;
+    border-radius: 5px;
+}
+
+ul.shuffles-list li button.btn-remove-shuffle{
+    width: 60px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: green;
+    color: white;
+    cursor: pointer;
+}
+
+ul.shuffles-list li:nth-child(even){
+    background-color: rgba(235, 208, 208, .7);
+}
+
+ul.shuffles-list li button.btn-remove-cart:hover{
+    background: rgb(2, 182, 2);
+}

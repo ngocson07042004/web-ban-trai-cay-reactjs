@@ -1,0 +1,9 @@
+main{
+    min-height: 50vh;
+}
+
+.content h4{
+    display: block;
+    font-size: clamp(0.75rem, 0.705rem + 0.227vw, 0.875rem);
+    font-weight: normal;
+}

@@ -1,0 +1,98 @@
+.container-menu-bottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 10%;
+    max-width: 100%;
+    box-shadow: 0 -5px 5px 2px rgb(114, 114, 114);
+    background: white;
+    display: none;
+    z-index: 0;
+}
+
+.container-menu-bottom ul.menu-bottom{
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+ul.menu-botom li{
+    width: max-content;
+    height: 100%;
+}
+
+ul.menu-bottom li>a,
+ul.menu-bottom li:not(ul.menu-bottom li:nth-child(3)){
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: clamp(0.875rem, 0.83rem + 0.227vw, 1rem);
+}
+
+ul.menu-bottom li i{
+   color: red;
+}
+
+ul.menu-bottom li:nth-child(3){
+    width: clamp(3.125rem, 2.443rem + 3.409vw, 5rem);
+    height: clamp(3.125rem, 2.443rem + 3.409vw, 5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 -5px 5px 2px rgb(114, 114, 114);
+    background: white;
+    position: absolute;
+    top: -35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+ul.menu-bottom li:nth-child(3) span.quantity{
+    width: clamp(0.938rem, 0.818rem + 0.595vw, 1.188rem);
+    height: clamp(0.938rem, 0.818rem + 0.595vw, 1.188rem);
+    display: flex;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    position: absolute;
+    top: clamp(-0.344rem, -0.507rem + 0.818vw, 0rem);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2px;
+    color: white;
+    font-size: clamp(0.75rem, 0.682rem + 0.341vw, 0.938rem);
+}
+
+ul.menu-bottom li:nth-child(3)>a,
+ul.menu-bottom li:nth-child(3)>span{
+    font-size: clamp(0.75rem, 0.705rem + 0.227vw, 0.875rem);
+}
+
+ul.menu-bottom li:hover{
+    cursor: pointer;
+}
+
+ul.menu-bottom li:hover a>span,
+ul.menu-bottom li:hover span{
+    color: green;
+    font-weight: bold;
+}
+
+@media (max-width: 992px) {
+    .container-menu-bottom{
+        display: block;
+        margin-top: -20px;
+    }
+}

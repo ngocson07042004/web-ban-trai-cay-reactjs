@@ -1,0 +1,177 @@
+header{
+    width: 100%;
+    height: auto;
+    padding: 15px 10px;
+    max-width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr calc(100% - 4fr) repeat(2, 1fr) 1fr;
+    grid-template-areas: 
+    "img-header input-group-header contact-notify user-notify icons-header";
+    gap: 25px;
+    justify-content: space-around;
+    align-items: center;
+    place-items: center;
+}
+
+img.img-header{
+    max-width: 190px;
+    max-height: 49px;
+    grid-area: img-header;
+}
+
+.input-group-header{
+    width: 320px;
+    height: 40px;
+    border: 1px solid rgb(92, 64, 64);
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+    grid-area: input-group-header;
+
+}
+
+.input-group-header input,
+.input-group-header button{
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.input-group-header input{
+    width: calc(100% - 40px);
+    height: 100%;
+    padding: 10px;
+    flex: 1 0 calc(100% - 40px);
+}
+
+.input-group-header button{
+    width: 40px;
+    height: 40px;
+    flex: 1 0 40px;
+    cursor: pointer;
+}
+
+.icons-header{
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    height: 50px;
+    margin: auto 0;
+    grid-area: icons-header;
+}
+
+.icons-header button{
+    border: none;
+    outline: none;
+    background: none;
+    margin-top: 4px;
+    margin-left: 0px;
+    position: relative;
+}
+
+.icons-header button i{
+    font-size: 20px;
+    color: black;
+}
+
+.icons-header button span.amount{
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    top: 3px;
+    right: -7px;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.icons-header button.btn span.hidden,
+.icons-footer button.btn span.hidden{
+    position: absolute;
+    top: 30px;
+    left: -20px;
+    width: max-content;
+    height: auto;
+    border: 1px solid rgb(180, 143, 143);
+    background: rgb(77, 30, 30);
+    color: white;
+    padding: 5px;
+    display: none;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.icons-header button.btn:hover span.hidden,
+.icons-footer button.btn:hover span.hidden{
+    display: block;
+}
+
+.user-notify strong, 
+.contact-notify strong{
+    cursor: pointer;
+}
+
+@media (max-width: 992px){
+    header{
+        grid-template-columns: 3fr 6fr 3fr;
+        grid-template-areas: 
+        "img-header input-group-header icons-header";
+        margin: 0 auto;
+    }
+
+    .input-group-header{
+        width: 100%;
+    }
+
+    header .contact-notify,
+    header .user-notify{
+        display: none;
+    }
+}
+
+@media (max-width: 650px){
+    header{
+        grid-template-columns: repeat(2, 5fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "img-header icons-header"
+        "input-group-header input-group-header";
+        row-gap: 0;
+        padding: 5px 20px;
+    }
+
+    img.img-header{
+        justify-self: flex-start;
+    }
+
+    .icons-header{
+        justify-self: flex-end;
+        width: 150px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 424px){
+    img.img-header{
+        width: 150px;
+    }
+
+    .icons-header{
+        width: 100px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 320px){
+    header{
+        padding: 0 15px;
+    }
+
+    img.img-header{
+        width: 125px;
+    }
+}

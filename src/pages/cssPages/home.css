@@ -1,0 +1,117 @@
+main{
+    min-height: 70vh;
+}
+
+.container-banner{
+    width: 100%;
+    height: 30%;
+    margin-top: 20px;
+    position: relative;
+    container-type: inline-size;
+    container-name: banner;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-banner img{
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container-banner button{
+    width: max-content;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    background: none;
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-banner button::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    width: 50%;
+    height: 2px;
+    background: white;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.container-banner button:hover::after{
+    background: rgb(245, 72, 72);
+    width: 100%;
+    font-weight: bold;
+}
+
+.container-banner button:hover{
+    color: rgb(245, 72, 72);
+    font-weight: bold;
+}
+
+.content-slider{
+    width: 90%;
+    height: 10%;
+    margin: 30px auto;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    position: relative;
+}
+
+.content-slider::before{
+    content: "Sản phẩm nổi bật";
+    position: absolute;
+    width: max-content;
+    height: 30px;
+    background: white;
+    padding: 5px;
+    top: -13%;
+    left: 5%;
+    font-size: clamp(0.75rem, 0.659rem + 0.455vw, 1rem);
+    font-weight: bold;
+}
+
+.content-slider .item-slider{
+    width: max-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-slider .item-slider img{
+    width: 70%;
+    height: 70%;
+    -webkit-user-drag: none;
+    user-select: none;
+    object-fit: fill;
+    margin: 0 auto;
+}
+
+.content-slider .item-slider h5{
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    font-size: 0.75rem;
+}
+
+.content-slider .item-slider:hover img{
+    transform: rotate(22deg) scale(1.02);
+}
+
+@container banner (max-width: 992px){
+    .container-banner img{
+        margin: 0 -10px;
+    }
+}

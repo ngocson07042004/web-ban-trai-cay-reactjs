@@ -1,0 +1,118 @@
+.item{
+    width: 33.3333%;
+    min-height: 33vh;
+    border: 1px solid rgb(122, 79, 79);
+    border-radius: 5px;
+    padding: 5px;
+    flex: 1 0 33.3333;
+    position: relative;
+}
+
+.item img{
+    width: 100%;
+    margin: 0 auto;
+    transition: .2s;
+}
+
+.item h5,
+.item span.product-price{
+    font-size: clamp(0.75rem, 0.659rem + 0.455vw, 1rem);
+}
+
+.item button{
+    border: none;
+    outline: none;
+    background: none;
+    display: none;
+}
+
+.item button i{
+    font-size: clamp(0.688rem, 0.619rem + 0.341vw, 0.875rem);
+}
+
+.item button.btn-heart>i#active{
+    color: red;
+}
+
+.item button.btn-heart{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.item button.btn-cart{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.item button.btn-shuffle{
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    cursor: pointer;
+}
+
+.item button.btn-heart::after{
+    content: "Thêm yêu thích";
+    width: max-content;
+    height: auto;
+    padding: 5px;
+    border: 1px solid white;
+    background: rgb(60, 60, 60);
+    color: white;
+    font-size: .6rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: -170%;
+    display: none;
+}
+
+.item button.btn-cart::after{
+    content: "Thêm giỏ hàng";
+    width: max-content;
+    height: auto;
+    padding: 5px;
+    border: 1px solid white;
+    background: rgb(60, 60, 60);
+    color: white;
+    font-size: .6rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: -170%;
+    display: none;
+}
+
+.item button.btn-shuffle::after{
+    content: "Thêm so sánh";
+    width: max-content;
+    height: auto;
+    padding: 5px;
+    border: 1px solid white;
+    background: rgb(60, 60, 60);
+    color: white;
+    font-size: .6rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: -170%;
+    display: none;
+}
+
+.item:hover button{
+    display: block;
+}
+
+.item:hover img{
+    transform: scale(1.05);
+}
+
+.item button.btn-heart:hover::after,
+.item button.btn-cart:hover::after,
+.item button.btn-shuffle:hover::after{
+    display: block;
+}

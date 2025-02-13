@@ -1,0 +1,61 @@
+.category{
+    width: 85%;
+    height: auto;
+    max-width: 100%;
+    border-top: 3px solid red;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category .item{
+    width: 20%;
+    height: 20%;
+}
+
+.fruit-category::before{
+    content: 'Trái cây tươi';
+    background: red;
+    padding: 10px;
+    color: white;
+    width: max-content;
+    height: 20px;
+    border-radius: 5px 5px 0px 0px;
+    position: absolute;
+    top: -40px;
+    font-weight: bold;
+    font-size: clamp(0.813rem, 0.625rem + 0.5vw, 1rem);
+}
+
+.juice-category::before{
+    content: 'Nước ép';
+    background: red;
+    padding: 10px;
+    color: white;
+    width: max-content;
+    height: 20px;
+    border-radius: 5px 5px 0px 0px;
+    position: absolute;
+    top: -40px;
+    font-size: clamp(0.813rem, 0.625rem + 0.5vw, 1rem);
+    font-weight: bold;
+}
+
+.box-fruit-category::before{
+    content: 'Trái cây đóng hộp';
+    background: red;
+    padding: 10px;
+    color: white;
+    width: max-content;
+    height: 20px;
+    border-radius: 5px 5px 0px 0px;
+    position: absolute;
+    top: -40px;
+    font-size: clamp(0.813rem, 0.625rem + 0.5vw, 1rem);
+    font-weight: bold;
+}
+
+.category:not(.category:first-child){
+    margin-top: 60px;
+}

@@ -1,0 +1,50 @@
+:root{
+    --success: rgb(36, 240, 36);
+    --danger: rgb(224, 40, 40);
+}
+
+.toast{
+    width: 220px;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    padding: 7px 0;
+    border-radius: 3px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.03);
+}
+
+.toast .icon i{
+    font-size: clamp(0.875rem, 0.648rem + 1.136vw, 1.5rem);
+}
+
+.toast .body h4,
+.toast .body span{
+    font-size: clamp(0.75rem, 0.659rem + 0.455vw, 1rem);
+}
+
+.toast button{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.toast-success{
+    border-left: 4px solid var(--success);
+}
+
+.toast-success .icon i,
+.toast-success .body h4{
+    color: var(--success)
+}
+
+.toast-danger{
+    border-left: 4px solid var(--danger);
+}
+
+.toast-danger .icon i,
+.toast-danger .body h4{
+    color: var(--danger)
+}

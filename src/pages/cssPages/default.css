@@ -1,0 +1,47 @@
+main{
+    padding: 20px 5px;
+}
+
+.content{
+    width: 90%;
+    height: 50%;
+    display: block;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.url-content{
+    width: 100%;
+    height: auto;
+}
+
+.url-content a{
+    color: black;
+}
+
+.url-content span{
+    color: green;
+    user-select: none;
+}
+
+.url-content a:hover{
+    color: green;
+    font-weight: bold;
+}
+
+.content hr{
+    max-width: 80%; 
+    background: rgba(84, 84, 104, 0.3);
+    margin: 0 auto;
+}
+
+.content h3{
+    font-size: clamp(0.875rem, 0.83rem + 0.227vw, 1rem);
+    margin-top: 10px;
+}
+
+hr{
+    margin-top: 15px;
+}

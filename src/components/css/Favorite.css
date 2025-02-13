@@ -1,0 +1,80 @@
+.favorite{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.favorite::-webkit-scrollbar{
+    width: 5px;
+}
+
+.favorite .favorite-title{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+    background: red;
+}
+
+.favorite-title h4{
+    color: white;
+}
+
+.favorite-title button{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+.favorite-product{
+    width: 100%;
+    height: 95%;
+    padding: 10px;
+}
+
+.favorite ul.favorites-list{
+    width: 100%;
+    height: 100%;
+}
+
+.favorite ul.favorites-list li{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.favorite ul.favorites-list li img{
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+}
+
+ul.favorites-list li .btn-group{
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul.favorites-list li .btn-group button{
+    width: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+ul.favorites-list li .btn-group span.quantity{
+    width: calc(100% - 20px);
+    background: rgb(243, 230, 230);
+    border: 1px solid rgb(51, 50, 50);
+    text-align: center;
+    border-radius: 5px;
+}
+
+ul.favorites-list li:nth-child(even){
+    background-color: rgba(235, 208, 208, .7);
+}
